@@ -17,12 +17,11 @@ public class PedidoService {
     
     @Autowired
     private PedidoRepository pedidoRepository;
-
+    
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
     Logger log = LoggerFactory.getLogger(PedidoService.class);
-
 
     public Pedido savePedido(Pedido pedido) {
         for( DetallePedido dp : pedido.getDetalle()){
